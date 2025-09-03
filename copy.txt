@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -22,16 +24,41 @@
 
     <!-- Main Content -->
     <main id="mainContent">
+        <!-- Hero Section old
+        <section class="hero">
+            <div class="hero-background">
+                <img src="https://images.pexels.com/photos/1032650/pexels-photo-1032650.jpeg" alt="Ocean waves" class="hero-image">
+            </div>
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    <span>TheDeep</span>
+                    <span>_ArtStudios</span>
+                </h1>
+                <p class="hero-subtitle">"Express yourself—your way, your colors, your story."</p>
+                <button class="hero-btn" onclick="scrollToSection('booking')">Book Now</button>
+            </div>
+        </section>
+    -->
         <!-- Hero Section -->
-    <!-- Hero Section with Carousel -->
+<!-- Hero Section -->
 <section class="hero">
-  <div class="hero-background">
-    <img src="https://images.pexels.com/photos/1032650/pexels-photo-1032650.jpeg" alt="Ocean waves" class="hero-image">
-  </div>
-
-  <div class="hero-layout">
-    <!-- Left side: Carousel -->
-    <div class="carousel-container hero-carousel">
+  <!-- Carousel on the left -->
+  <div class="hero-carousel">
+    <div class="carousel-container">    .commission-image img {
+        max-width: 250px;
+        width: 100%;
+        height: auto;
+        border-radius: 16px; /* Optional: rounded corners */
+        display: block;
+        margin: 0 auto;
+    }    .commission-image img {
+        max-width: 250px;
+        width: 100%;
+        height: auto;
+        border-radius: 16px; /* Optional: rounded corners */
+        display: block;
+        margin: 0 auto;
+    }
       <div class="carousel-wrapper" id="carouselWrapper">
         <div class="carousel-slide active">
           <img src="public/ocean.jpg" alt="Ocean Painting">
@@ -56,9 +83,11 @@
         </div>
       </div>
 
+      <!-- Navigation -->
       <button class="carousel-nav prev-btn" onclick="prevSlide()">‹</button>
       <button class="carousel-nav next-btn" onclick="nextSlide()">›</button>
 
+      <!-- Dots -->
       <div class="carousel-dots">
         <span class="carousel-dot active" onclick="goToSlide(0)"></span>
         <span class="carousel-dot" onclick="goToSlide(1)"></span>
@@ -69,84 +98,111 @@
         <span class="carousel-dot" onclick="goToSlide(6)"></span>
       </div>
     </div>
+  </div>
 
-    <!-- Right side: Title and button -->
-    <div class="hero-content">
-      <h1 class="hero-title">
-        <span>TheDeep</span>
-        <span>_ArtStudios</span>
-      </h1>
-      <p class="hero-subtitle">"Express yourself—your way, your colors, your story."</p>
-      <button class="hero-btn" onclick="scrollToSection('booking')">Book Now</button>
-    </div>
+  <!-- Hero text on right -->
+  <div class="hero-content">
+    <h1 class="hero-title">
+      <span>TheDeep</span>
+      <span>_ArtStudios</span>
+    </h1>
+    <p class="hero-subtitle">
+      "Express yourself—your way, your colors, your story."
+    </p>
+    <button class="hero-btn" onclick="scrollToSection('booking')">Book Now</button>
   </div>
 </section>
 
-
-
+        <!-- Photo Gallery Section - Updated Carousel -->
+         <!-- REMOVED
+        <section class="gallery-section">
+            <div class="container">
+                <h2 class="section-title">Gallery</h2>
+                <div class="carousel-container">
+                    <div class="carousel-wrapper" id="carouselWrapper">
+                        <div class="carousel-slide active">
+                            <img src="public/ocean.jpg" alt="Ocean Painting">
+                        </div>
+                        <div class="carousel-slide next">
+                            <img src="public/HandPainting.jpg" alt="Hand Painting">
+                        </div>
+                        <div class="carousel-slide hidden-right">
+                            <img src="public/WhiteFlowers.jpg" alt="White Proteas">
+                        </div>
+                        <div class="carousel-slide hidden-right">
+                            <img src="public/paintingClass.jpg" alt="Painting class">
+                        </div>
+                        <div class="carousel-slide hidden-left">
+                            <img src="public/PaintingBeach.jpg" alt="Coastal art">
+                        </div>
+                        <div class="carousel-slide hidden-left">
+                            <img src="public/Tomatoes.jpg" alt="Painting">
+                        </div>
+                        <div class="carousel-slide prev">
+                            <img src="public/Paint Setup Small Beach.jpg" alt="Beach painting">
+                        </div>
+                    </div>
+                    
+                    <button class="carousel-nav prev-btn" onclick="prevSlide()">‹</button>
+                    <button class="carousel-nav next-btn" onclick="nextSlide()">›</button>
+                    
+                    <div class="carousel-dots">
+                        <span class="carousel-dot active" onclick="goToSlide(0)"></span>
+                        <span class="carousel-dot" onclick="goToSlide(1)"></span>
+                        <span class="carousel-dot" onclick="goToSlide(2)"></span>
+                        <span class="carousel-dot" onclick="goToSlide(3)"></span>
+                        <span class="carousel-dot" onclick="goToSlide(4)"></span>
+                        <span class="carousel-dot" onclick="goToSlide(5)"></span>
+                        <span class="carousel-dot" onclick="goToSlide(6)"></span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    -->
         <!-- Classes Section -->
         <section class="classes-section">
             <div class="container">
                 <h2 class="section-title">Our Classes</h2>
-                <div class="classes-layout">
-                    <div class="classes-list">
-                        <div class="class-card" onclick="openModal('essence')">
-                            <div class="class-icon">🎨</div>
-                            <h3 class="class-title">Essence</h3>
-                            <p class="class-description">Still life painting class.</p>
-                            <p class="class-price">$25pp</p>
-                            <div class="class-btn">More Info</div>
-                        </div>
-
-                        <div class="class-card" onclick="openModal('immersion')">
-                            <div class="class-icon">🌊</div>
-                            <h3 class="class-title">Immersion</h3>
-                            <p class="class-description">Ocean painting class</p>
-                            <p class="class-price">$15pp</p>
-                            <div class="class-btn">More Info</div>
-                        </div>
-
-                        <div class="class-card" onclick="openModal('nurturer')">
-                            <div class="class-icon">🌸</div>
-                            <h3 class="class-title">The Nurturer</h3>
-                            <p class="class-description">Floral painting class</p>
-                            <p class="class-price">$30pp</p>
-                            <div class="class-btn">More Info</div>
-                        </div>
+                <div class="classes-grid">
+                    <div class="class-card" onclick="openModal('essence')">
+                        <div class="class-icon">🎨</div>
+                        <h3 class="class-title">Essence</h3>
+                        <p class="class-description">Still life painting class.</p>
+                        <p class="class-price">$25pp</p>
+                        <div class="class-btn">More Info</div>
                     </div>
-                    
-                    <div class="classes-video">
-                        <div class="video-container">
-                            <div class="video-placeholder">
-                                <div class="video-icon">🎥</div>
-                                <p>Class Preview Video</p>
-                                <small>Video will be added soon</small>
-                            </div>
-                            <!-- Video element ready for when file is provided -->
-                            <video class="class-video hidden"  autoplay muted loop playsinline>
-                                <source src="public/waterVideo.mp4" type="video/mp4">
-                                Your browser does not support the video tag.
-                            </video>
-                        </div>
+
+                    <div class="class-card" onclick="openModal('immersion')">
+                        <div class="class-icon">🌊</div>
+                        <h3 class="class-title">Immersion</h3>
+                        <p class="class-description">Ocean painting class</p>
+                        <p class="class-price">$15pp</p>
+                        <div class="class-btn">More Info</div>
+                    </div>
+
+                    <div class="class-card" onclick="openModal('nurturer')">
+                        <div class="class-icon">🌸</div>
+                        <h3 class="class-title">The Nurturer</h3>
+                        <p class="class-description">Floral painting class</p>
+                        <p class="class-price">$30pp</p>
+                        <div class="class-btn">More Info</div>
                     </div>
                 </div>
             </div>
         </section>
 
-         <!-- Commission Section -->
+        <!-- Commission Section -->
 <section class="commission-section">
   <div class="container commission-grid">
     <div class="commission-text">
       <h2 class="section-title">Commissions</h2>
       <p>
         Looking for something unique and personal? I create custom commission 
-        pieces tailored to your space, story, and style. Whether it's a gift, 
-        centerpiece, or a personal treasure, I'll work with you to bring your 
+        pieces tailored to your space, story, and style. Whether it’s a gift, 
+        centerpiece, or a personal treasure, I’ll work with you to bring your 
         vision to life through color, texture, and expression.
       </p>
-      <button class="hero-btn" onclick="document.getElementById('booking').scrollIntoView({ behavior: 'smooth' });">
-        Enquire Now
-      </button>
+      <button class="hero-btn">Enquire Now</button>
     </div>
     <div class="commission-image">
       <img src="public/WhiteFlowers.jpg" alt="Commission artwork">
@@ -269,201 +325,4 @@
 </body>
 </html>
 
-<!--
-        <section class="gallery-section">
-            <div class="container">
-                <h2 class="section-title">Gallery</h2>
-                <div class="carousel-container">
-                    <div class="carousel-wrapper" id="carouselWrapper">
-                        <div class="carousel-slide active">
-                            <img src="public/ocean.jpg" alt="Ocean Painting">
-                        </div>
-                        <div class="carousel-slide next">
-                            <img src="public/HandPainting.jpg" alt="Hand Painting">
-                        </div>
-                        <div class="carousel-slide hidden-right">
-                            <img src="public/WhiteFlowers.jpg" alt="White Proteas">
-                        </div>
-                        <div class="carousel-slide hidden-right">
-                            <img src="public/paintingClass.jpg" alt="Painting class">
-                        </div>
-                        <div class="carousel-slide hidden-left">
-                            <img src="public/PaintingBeach.jpg" alt="Coastal art">
-                        </div>
-                        <div class="carousel-slide hidden-left">
-                            <img src="public/Tomatoes.jpg" alt="Painting">
-                        </div>
-                        <div class="carousel-slide prev">
-                            <img src="public/Paint Setup Small Beach.jpg" alt="Beach painting">
-                        </div>
-                    </div>
-                    
-                    <button class="carousel-nav prev-btn" onclick="prevSlide()">‹</button>
-                    <button class="carousel-nav next-btn" onclick="nextSlide()">›</button>
-                    
-                    <div class="carousel-dots">
-                        <span class="carousel-dot active" onclick="goToSlide(0)"></span>
-                        <span class="carousel-dot" onclick="goToSlide(1)"></span>
-                        <span class="carousel-dot" onclick="goToSlide(2)"></span>
-                        <span class="carousel-dot" onclick="goToSlide(3)"></span>
-                        <span class="carousel-dot" onclick="goToSlide(4)"></span>
-                        <span class="carousel-dot" onclick="goToSlide(5)"></span>
-                        <span class="carousel-dot" onclick="goToSlide(6)"></span>
-                    </div>
-                </div>
-            </div>
-        </section>
-    
-        /* Gallery Section - Updated Carousel Style */
-        .gallery-section {
-            background: linear-gradient(135deg, #AF957C 0%, #c89278 100%);
-            padding: 80px 0;
-        }
 
-        .section-title {
-            font-size: clamp(2rem, 4vw, 3rem);
-            color: white;
-            text-align: center;
-            margin-bottom: 60px;
-            font-weight: 700;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-        }
-
-        .section-title-script {
-            font-family: 'Dancing Script', cursive;
-            font-size: clamp(2.5rem, 5vw, 4rem);
-            color: #879983;
-            text-align: center;
-            margin-bottom: 60px;
-            font-weight: 700;
-        }
-
-        .carousel-container {
-            position: relative;
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 0 60px;
-        }
-
-        .carousel-wrapper {
-            position: relative;
-            height: 400px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            perspective: 1200px;
-        }
-
-        .carousel-slide {
-            position: absolute;
-            width: 350px;
-            height: 400px;
-            border-radius: 15px;
-            overflow: hidden;
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
-            transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-            cursor: pointer;
-        }
-
-        .carousel-slide img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        /* Center slide */
-        .carousel-slide.active {
-            transform: translateX(0) scale(1.1) rotateY(0deg);
-            z-index: 3;
-            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.4);
-        }
-
-        /* Left slide */
-        .carousel-slide.prev {
-            transform: translateX(-200px) scale(0.85) rotateY(25deg);
-            z-index: 2;
-            opacity: 0.8;
-        }
-
-        /* Right slide */
-        .carousel-slide.next {
-            transform: translateX(200px) scale(0.85) rotateY(-25deg);
-            z-index: 2;
-            opacity: 0.8;
-        }
-
-        /* Hidden slides */
-        .carousel-slide.hidden-left {
-            transform: translateX(-400px) scale(0.7) rotateY(45deg);
-            z-index: 1;
-            opacity: 0.4;
-        }
-
-        .carousel-slide.hidden-right {
-            transform: translateX(400px) scale(0.7) rotateY(-45deg);
-            z-index: 1;
-            opacity: 0.4;
-        }
-
-        /* Navigation arrows */
-        .carousel-nav {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            background: rgba(255, 255, 255, 0.9);
-            border: none;
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            font-size: 20px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            z-index: 4;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #879983;
-        }
-
-        .carousel-nav:hover {
-            background: white;
-            transform: translateY(-50%) scale(1.1);
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-        }
-
-        .carousel-nav.prev-btn {
-            left: 10px;
-        }
-
-        .carousel-nav.next-btn {
-            right: 10px;
-        }
-
-        /* Carousel dots */
-        .carousel-dots {
-            text-align: center;
-            padding: 30px 0 0;
-        }
-
-        .carousel-dot {
-            cursor: pointer;
-            height: 12px;
-            width: 12px;
-            margin: 0 6px;
-            background-color: rgba(255, 255, 255, 0.5);
-            border-radius: 50%;
-            display: inline-block;
-            transition: all 0.3s ease;
-            border: 2px solid transparent;
-        }
-
-        .carousel-dot.active {
-            background-color: white;
-            border-color: rgba(255, 255, 255, 0.8);
-            transform: scale(1.2);
-        }
-
-        .carousel-dot:hover {
-            background-color: rgba(255, 255, 255, 0.8);
-        }
-    -->

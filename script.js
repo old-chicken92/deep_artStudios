@@ -1,4 +1,4 @@
- // Class information data
+// Class information data
         const classInfo = {
             essence: {
                 title: "Essence",
@@ -139,6 +139,25 @@
         document.addEventListener('DOMContentLoaded', function() {
             // Initialize carousel
             updateSlidePositions();
+
+             // Try to load and show video
+        const video = document.querySelector('.class-video');
+        const placeholder = document.querySelector('.video-placeholder');
+          if (video) {
+        video.addEventListener('loadeddata', function() {
+            // Video loaded successfully, hide placeholder and show video
+            placeholder.style.display = 'none';
+            video.classList.remove('hidden');
+        });
+        
+        video.addEventListener('error', function() {
+            // Video failed to load, keep placeholder visible
+            console.log('Video failed to load');
+        });
+        
+        // Start loading the video
+        video.load();
+    }
             
             // Add scroll animations for booking steps
             const observerOptions = {
@@ -158,8 +177,9 @@
             document.querySelectorAll('.booking-step, .booking-step-final').forEach(step => {
                 observer.observe(step);
             });
-        });
-
+            
+    
+});
         // Add parallax effect to hero background
         window.addEventListener('scroll', function() {
             const scrolled = window.pageYOffset;
@@ -168,3 +188,7 @@
                 heroImage.style.transform = `translateY(${scrolled * 0.5}px)`;
             }
         });
+
+
+        //const video = document.querySelector('.class-video');
+        //video.classList.remove('hidden');
