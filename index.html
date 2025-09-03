@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TheDeep_ArtStudios</title>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&family=Dancing+Script&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* styles.css */
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navigation">
+        <button id="aboutBtn" class="nav-btn">About Me</button>
+        <button id="homeBtn" class="nav-btn hidden">Back to Home</button>
+    </nav>
+
+    <!-- Main Content -->
+    <main id="mainContent">
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-background">
+                <img src="https://images.pexels.com/photos/1032650/pexels-photo-1032650.jpeg" alt="Ocean waves" class="hero-image">
+            </div>
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    <span>TheDeep</span>
+                    <span>_ArtStudios</span>
+                </h1>
+                <p class="hero-subtitle">"Express yourself—your way, your colors, your story."</p>
+                <button class="hero-btn" onclick="scrollToSection('booking')">Book Now</button>
+            </div>
+        </section>
+
+        <!-- Photo Gallery Section - Updated Carousel -->
+        <section class="gallery-section">
+            <div class="container">
+                <h2 class="section-title">Gallery</h2>
+                <div class="carousel-container">
+                    <div class="carousel-wrapper" id="carouselWrapper">
+                        <div class="carousel-slide active">
+                            <img src="public/ocean.jpg" alt="Ocean Painting">
+                        </div>
+                        <div class="carousel-slide next">
+                            <img src="public/HandPainting.jpg" alt="Hand Painting">
+                        </div>
+                        <div class="carousel-slide hidden-right">
+                            <img src="public/WhiteFlowers.jpg" alt="White Proteas">
+                        </div>
+                        <div class="carousel-slide hidden-right">
+                            <img src="public/paintingClass.jpg" alt="Painting class">
+                        </div>
+                        <div class="carousel-slide hidden-left">
+                            <img src="public/PaintingBeach.jpg" alt="Coastal art">
+                        </div>
+                        <div class="carousel-slide hidden-left">
+                            <img src="public/Tomatoes.jpg" alt="Painting">
+                        </div>
+                        <div class="carousel-slide prev">
+                            <img src="public/Paint Setup Small Beach.jpg" alt="Beach painting">
+                        </div>
+                    </div>
+                    
+                    <button class="carousel-nav prev-btn" onclick="prevSlide()">‹</button>
+                    <button class="carousel-nav next-btn" onclick="nextSlide()">›</button>
+                    
+                    <div class="carousel-dots">
+                        <span class="carousel-dot active" onclick="goToSlide(0)"></span>
+                        <span class="carousel-dot" onclick="goToSlide(1)"></span>
+                        <span class="carousel-dot" onclick="goToSlide(2)"></span>
+                        <span class="carousel-dot" onclick="goToSlide(3)"></span>
+                        <span class="carousel-dot" onclick="goToSlide(4)"></span>
+                        <span class="carousel-dot" onclick="goToSlide(5)"></span>
+                        <span class="carousel-dot" onclick="goToSlide(6)"></span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Classes Section -->
+        <section class="classes-section">
+            <div class="container">
+                <h2 class="section-title">Our Classes</h2>
+                <div class="classes-grid">
+                    <div class="class-card" onclick="openModal('essence')">
+                        <div class="class-icon">🎨</div>
+                        <h3 class="class-title">Essence</h3>
+                        <p class="class-description">Still life painting class.</p>
+                        <p class="class-price">$25pp</p>
+                        <div class="class-btn">More Info</div>
+                    </div>
+
+                    <div class="class-card" onclick="openModal('immersion')">
+                        <div class="class-icon">🌊</div>
+                        <h3 class="class-title">Immersion</h3>
+                        <p class="class-description">Ocean painting class</p>
+                        <p class="class-price">$15pp</p>
+                        <div class="class-btn">More Info</div>
+                    </div>
+
+                    <div class="class-card" onclick="openModal('nurturer')">
+                        <div class="class-icon">🌸</div>
+                        <h3 class="class-title">The Nurturer</h3>
+                        <p class="class-description">Floral painting class</p>
+                        <p class="class-price">$30pp</p>
+                        <div class="class-btn">More Info</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Booking Section - Updated Layout -->
+        <section id="booking" class="booking-section">
+            <div class="container">
+                <h2 class="section-title-script">Make a Booking</h2>
+                <div class="booking-grid">
+                    <div class="booking-step">
+                        <h3 class="step-title">Gather your friends</h3>
+                        <p class="step-description">Find a crew that you would like to paint with, around 5-10 people works best for the class! But feel free to message if you have something different in mind - I'm sure we'll be able to make your vision work!</p>
+                    </div>
+                    
+                    <div class="booking-step">
+                        <h3 class="step-title">Message your interest</h3>
+                        <p class="step-description">Let me know you are keen, and I will send through some potentially available time slots.</p>
+                    </div>
+                    
+                    <div class="booking-step">
+                        <h3 class="step-title">Choose a time, date and location</h3>
+                        <p class="step-description">Chat to your friends to choose a place to paint (remember I come to you!) and a date & time that works for everyone. I'll need to know what kind of space you have, your suburb, and the names of all your friends (and any other info you think I should know!).</p>
+                    </div>
+                    
+                    <div class="booking-step">
+                        <h3 class="step-title">Choose a class</h3>
+                        <p class="step-description">There are a variety of classes on offer for you to try! Look through the classes with your friends and choose which one you would like to do.</p>
+                    </div>
+                </div>
+                
+                <div class="booking-step-final">
+                    <h3 class="step-title">Come and paint!</h3>
+                    <p class="step-description">On the day of our class, I will come 30 mins earlier to set up the space and make sure we are ready to go. You set up your own drinks and food, and we will make sure we have a great time! Classes will go for 2 hours each.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="contact-section">
+            <div class="contact-background">
+                <img src="public/paintingClass.jpg" alt="Painting background" class="contact-bg-image">
+            </div>
+            <div class="contact-content">
+                <h2 class="contact-title">Contact Us</h2>
+                <p class="contact-text">Message me on social media to make a booking & get in touch!</p>
+                <div class="social-links">
+                    <a href="https://www.instagram.com/thedeep_artstudios?igsh=Mmt6NnpxMGJ4eTFp" target="_blank" class="social-link">
+                        <!-- Instagram SVG Icon (transparent, white) -->
+                        <span class="social-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <rect width="24" height="24" rx="6" fill="none"/>
+                                <path d="M12 7.5A4.5 4.5 0 1 0 12 16.5A4.5 4.5 0 1 0 12 7.5Z" stroke="white" stroke-width="2"/>
+                                <circle cx="17" cy="7" r="1" fill="white"/>
+                            </svg>
+                        </span>
+                        <span>thedeep_artstudios</span>
+                    </a>
+                    <a href="https://facebook.com/share/12Jz1xnjo8D/" target="_blank" class="social-link">
+                        <!-- Facebook SVG Icon (transparent, white) -->
+                        <span class="social-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <rect width="24" height="24" rx="6" fill="none"/>
+                                <path d="M16 8.5H14.5C14.22 8.5 14 8.72 14 9V10H16V12H14V17H12V12H10V10H12V9C12 7.9 12.9 7 14 7H16V8.5Z" fill="white"/>
+                            </svg>
+                        </span>
+                        <span>Chloe_Tarasenko</span>
+                    </a>
+                </div>
+            </div>  
+        </section>
+    </main>
+
+    <!-- About Page -->
+    <div id="aboutContent" class="about-page hidden">
+        <div class="about-container">
+            <h1 class="about-title">About the Studio</h1>
+            
+            <div class="about-text">
+                <p>
+                    The Deep Art Studios was born out of the desire to see people of all ages, skill levels, and walks of life find the simple joy that is painting. To give all people a moment to rest and reflect, and to focus on what matters most. A momentary breath of fresh air from a life of hurry and exacerbating pace.
+                </p>
+                <p>
+                    Everyone can be a painter. In these classes I will show you techniques to elevate your work and create something YOU love. You get to choose the colours, the art style, the composition - based on your preferences and personal taste. You create for your spaces.
+                </p>
+                <p>
+                    We will get to look at some different examples of art styles, and you will create whatever you most resonate with. Whether you came to do some deep self-expression, or just to yap with your bestie - I am here to support you to get out of the class what you came for.
+                </p>
+                <p>
+                    One of the key things we focus on is the importance of colour in the creation of painting pieces, and how it contributes to the overall tone and mood of your final painting. We look at movement, texture, and light - think Impressionism and abstract expressionism.
+                </p>
+                <p>
+                    The costs are kept as low as possible to make this class accessible. The painting journey is about you finding joy and grounding in the present moment. It's a metaphor for trusting the process and accepting your authentic expression as beautiful and sacred as it is. There is no pressure to create a specific result or receive a certain outcome - it's about trying something new and curiously engaging with the experience of painting.
+                </p>
+                <p>
+                    It's about authentic connection, self-expression, and grounding in the present.
+                </p>
+                <p class="signature">
+                    I can't wait to paint with you,<br>
+                    Chloe x
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Class Modal -->
+    <div id="classModal" class="modal hidden">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2 id="modalTitle" class="modal-title"></h2>
+            <p id="modalDescription" class="modal-description"></p>
+            <button class="modal-btn" onclick="bookNow()">Book Now</button>
+        </div>
+    </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+
