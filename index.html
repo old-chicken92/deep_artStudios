@@ -4,118 +4,129 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TheDeep_ArtStudios</title>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&family=Dancing+Script&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-    <style>
-        .hidden {
-            display: none;
-        }
-    </style>
 </head>
 <body>
     <!-- Navigation -->
     <nav class="navigation">
         <button id="aboutBtn" class="nav-btn">About Me</button>
-        <button id="homeBtn" class="nav-btn hidden">Back to Home</button>
+        <button id="homeBtn" class="nav-btn hidden">Home</button>
     </nav>
 
     <!-- Main Content -->
     <main id="mainContent">
         <!-- Hero Section -->
-<section class="hero">
-    <div class="hero-layout">
-        <!-- Left side: Title Card and Info Card -->
-        <div class="hero-left">
-            <!-- Quote Card -->
-            <div class="hero-quote-card">
-                <h1 class="hero-title">
-                    <span>TheDeep</span>
-                    <span>_ArtStudios</span>
-                </h1>
-                <blockquote class="hero-quote">
-                    "Express yourself—your way, your colors, your story."
-                </blockquote>
-            </div>
-
-            <!-- Info Card -->
-            <div class="hero-info-card">
-                <p class="hero-subtitle">
-                    Discover the joy of painting in our intimate group classes. Whether you're a complete beginner or looking to explore new techniques, our mobile art studio brings creativity directly to you and your friends.
-                </p>
-                <button class="hero-btn" onclick="scrollToSection('booking')">Book Now</button>
-            </div>
-        </div>
-
-        <!-- Right side: Simple Carousel -->
-        <div class="hero-carousel">
-            <div class="carousel-container">
-                <div class="carousel-images">
-                    <img src="public/ocean.jpg" alt="Ocean Painting" class="carousel-image active">
-                    <img src="public/HandPainting.jpg" alt="Hand Painting" class="carousel-image">
-                    <img src="public/WhiteFlowers.jpg" alt="White Proteas" class="carousel-image">
-                    <img src="public/paintingClass.jpg" alt="Painting class" class="carousel-image">
-                    <img src="public/PaintingBeach.jpg" alt="Coastal art" class="carousel-image">
-                    <img src="public/Tomatoes.jpg" alt="Painting" class="carousel-image">
-                    <img src="public/Paint Setup Small Beach.jpg" alt="Beach painting" class="carousel-image">
+        <section class="hero">
+            <div class="hero-container">
+                <div class="hero-content">
+                    <div class="hero-text">
+                        <h1 class="hero-title">
+                            <span class="title-main">TheDeep</span>
+                            <span class="title-sub">Art Studios</span>
+                        </h1>
+                        <blockquote class="hero-quote">
+                            "Express yourself—your way, your colors, your story."
+                        </blockquote>
+                        <p class="hero-description">
+                            Discover the joy of painting in our intimate group classes. Whether you're a complete beginner or looking to explore new techniques, our mobile art studio brings creativity directly to you.
+                        </p>
+                        <button class="cta-button" onclick="scrollToSection('booking')">Start Your Journey</button>
+                    </div>
                 </div>
-                
-                <div class="carousel-controls">
-                    <span class="carousel-dot active" onclick="goToSlide(0)"></span>
-                    <span class="carousel-dot" onclick="goToSlide(1)"></span>
-                    <span class="carousel-dot" onclick="goToSlide(2)"></span>
-                    <span class="carousel-dot" onclick="goToSlide(3)"></span>
-                    <span class="carousel-dot" onclick="goToSlide(4)"></span>
-                    <span class="carousel-dot" onclick="goToSlide(5)"></span>
-                    <span class="carousel-dot" onclick="goToSlide(6)"></span>
+
+                <div class="hero-gallery">
+                    <div class="gallery-container">
+                        <div class="gallery-images">
+                            <img src="public/ocean.jpg" alt="Ocean Painting" class="gallery-image active">
+                            <img src="public/HandPainting.jpg" alt="Hand Painting" class="gallery-image">
+                            <img src="public/WhiteFlowers.jpg" alt="White Proteas" class="gallery-image">
+                            <img src="public/paintingClass.jpg" alt="Painting class" class="gallery-image">
+                            <img src="public/PaintingBeach.jpg" alt="Coastal art" class="gallery-image">
+                            <img src="public/Tomatoes.jpg" alt="Painting" class="gallery-image">
+                            <img src="public/Paint Setup Small Beach.jpg" alt="Beach painting" class="gallery-image">
+                        </div>
+                        
+                        <div class="gallery-controls">
+                            <span class="gallery-dot active" onclick="goToSlide(0)"></span>
+                            <span class="gallery-dot" onclick="goToSlide(1)"></span>
+                            <span class="gallery-dot" onclick="goToSlide(2)"></span>
+                            <span class="gallery-dot" onclick="goToSlide(3)"></span>
+                            <span class="gallery-dot" onclick="goToSlide(4)"></span>
+                            <span class="gallery-dot" onclick="goToSlide(5)"></span>
+                            <span class="gallery-dot" onclick="goToSlide(6)"></span>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </div>
-</section>
+        </section>
 
         <!-- Classes Section -->
         <section class="classes-section">
             <div class="container">
-                <h2 class="section-title">Our Classes</h2>
-                <div class="classes-layout">
-                    <div class="classes-list">
-                        <div class="class-card" onclick="openModal('essence')">
-                            <div class="class-icon">🎨</div>
-                            <h3 class="class-title">Essence</h3>
-                            <p class="class-description">Still life painting class.</p>
-                            <p class="class-price">$25pp</p>
-                            <div class="class-btn">More Info</div>
+                <header class="section-header">
+                    <h2 class="section-title">Our Classes</h2>
+                    <p class="section-subtitle">Choose your creative adventure</p>
+                </header>
+                
+                <div class="classes-grid">
+                    <div class="class-card" onclick="openModal('essence')">
+                        <div class="class-icon">
+                            <span>🎨</span>
                         </div>
-
-                        <div class="class-card" onclick="openModal('immersion')">
-                            <div class="class-icon">🌊</div>
-                            <h3 class="class-title">Immersion</h3>
-                            <p class="class-description">Ocean painting class</p>
-                            <p class="class-price">$15pp</p>
-                            <div class="class-btn">More Info</div>
+                        <div class="class-info">
+                            <h3 class="class-name">Essence</h3>
+                            <p class="class-desc">Still life painting class</p>
+                            <div class="class-price">$25<span>/person</span></div>
                         </div>
-
-                        <div class="class-card" onclick="openModal('nurturer')">
-                            <div class="class-icon">🌸</div>
-                            <h3 class="class-title">The Nurturer</h3>
-                            <p class="class-description">Floral painting class</p>
-                            <p class="class-price">$30pp</p>
-                            <div class="class-btn">More Info</div>
+                        <div class="class-action">
+                            <span class="action-text">Learn More</span>
+                            <span class="action-arrow">→</span>
                         </div>
                     </div>
-                    
-                    <div class="classes-video">
-                        <div class="video-container">
-                            <div class="video-placeholder">
-                                <div class="video-icon">🎥</div>
-                                <p>Class Preview Video</p>
-                                <small>Video will be added soon</small>
-                            </div>
-                            <video class="class-video hidden" autoplay muted loop playsinline>
-                                <source src="public/waterVideo.mp4" type="video/mp4">
-                                Your browser does not support the video tag.
-                            </video>
+
+                    <div class="class-card" onclick="openModal('immersion')">
+                        <div class="class-icon">
+                            <span>🌊</span>
                         </div>
+                        <div class="class-info">
+                            <h3 class="class-name">Immersion</h3>
+                            <p class="class-desc">Ocean painting class</p>
+                            <div class="class-price">$15<span>/person</span></div>
+                        </div>
+                        <div class="class-action">
+                            <span class="action-text">Learn More</span>
+                            <span class="action-arrow">→</span>
+                        </div>
+                    </div>
+
+                    <div class="class-card" onclick="openModal('nurturer')">
+                        <div class="class-icon">
+                            <span>🌸</span>
+                        </div>
+                        <div class="class-info">
+                            <h3 class="class-name">The Nurturer</h3>
+                            <p class="class-desc">Floral painting class</p>
+                            <div class="class-price">$30<span>/person</span></div>
+                        </div>
+                        <div class="class-action">
+                            <span class="action-text">Learn More</span>
+                            <span class="action-arrow">→</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="video-section">
+                    <div class="video-container">
+                        <div class="video-placeholder">
+                            <div class="video-icon">🎥</div>
+                            <p>Class Preview</p>
+                            <small>Coming Soon</small>
+                        </div>
+                        <video class="class-video hidden" autoplay muted loop playsinline>
+                            <source src="public/waterVideo.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
                     </div>
                 </div>
             </div>
@@ -123,21 +134,23 @@
 
         <!-- Commission Section -->
         <section class="commission-section">
-            <div class="container commission-grid">
-                <div class="commission-text">
-                    <h2 class="section-title">Commissions</h2>
-                    <p>
-                        Looking for something unique and personal? I create custom commission 
-                        pieces tailored to your space, story, and style. Whether it's a gift, 
-                        centerpiece, or a personal treasure, I'll work with you to bring your 
-                        vision to life through color, texture, and expression.
-                    </p>
-                    <button class="hero-btn" onclick="document.getElementById('booking').scrollIntoView({ behavior: 'smooth' });">
-                        Enquire Now
-                    </button>
-                </div>
-                <div class="commission-image">
-                    <img src="public/WhiteFlowers.jpg" alt="Commission artwork">
+            <div class="container">
+                <div class="commission-content">
+                    <div class="commission-text">
+                        <h2 class="section-title">Custom Commissions</h2>
+                        <p class="commission-description">
+                            Looking for something unique and personal? I create custom commission 
+                            pieces tailored to your space, story, and style. Whether it's a gift, 
+                            centerpiece, or a personal treasure, I'll work with you to bring your 
+                            vision to life through color, texture, and expression.
+                        </p>
+                        <button class="cta-button secondary" onclick="scrollToSection('booking')">
+                            Start a Commission
+                        </button>
+                    </div>
+                    <div class="commission-image">
+                        <img src="public/WhiteFlowers.jpg" alt="Commission artwork" class="commission-img">
+                    </div>
                 </div>
             </div>
         </section>
@@ -145,114 +158,128 @@
         <!-- Booking Section -->
         <section id="booking" class="booking-section">
             <div class="container">
-                <h2 class="section-title-script">Make a Booking</h2>
-                <div class="booking-grid">
-                    <div class="booking-step">
-                        <h3 class="step-title">Gather your friends</h3>
-                        <p class="step-description">Find a crew that you would like to paint with, around 5-10 people works best for the class! But feel free to message if you have something different in mind - I'm sure we'll be able to make your vision work!</p>
-                    </div>
-                    
-                    <div class="booking-step">
-                        <h3 class="step-title">Message your interest</h3>
-                        <p class="step-description">Let me know you are keen, and I will send through some potentially available time slots.</p>
-                    </div>
-                    
-                    <div class="booking-step">
-                        <h3 class="step-title">Choose a time, date and location</h3>
-                        <p class="step-description">Chat to your friends to choose a place to paint (remember I come to you!) and a date & time that works for everyone. I'll need to know what kind of space you have, your suburb, and the names of all your friends (and any other info you think I should know!).</p>
-                    </div>
-                    
-                    <div class="booking-step">
-                        <h3 class="step-title">Choose a class</h3>
-                        <p class="step-description">There are a variety of classes on offer for you to try! Look through the classes with your friends and choose which one you would like to do.</p>
-                    </div>
-                </div>
+                <header class="section-header">
+                    <h2 class="section-title">How It Works</h2>
+                    <p class="section-subtitle">Simple steps to your perfect painting experience</p>
+                </header>
                 
-                <div class="booking-step-final">
-                    <h3 class="step-title">Come and paint!</h3>
-                    <p class="step-description">On the day of our class, I will come 30 mins earlier to set up the space and make sure we are ready to go. You set up your own drinks and food, and we will make sure we have a great time! Classes will go for 2 hours each.</p>
+                <div class="steps-container">
+                    <div class="step-card">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h3 class="step-title">Gather Your Crew</h3>
+                            <p class="step-description">Find 5-10 friends for the perfect painting party atmosphere.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="step-card">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h3 class="step-title">Send a Message</h3>
+                            <p class="step-description">Let me know you're interested and I'll share available time slots.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="step-card">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h3 class="step-title">Choose Details</h3>
+                            <p class="step-description">Pick your date, time, location, and painting class that works for everyone.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="step-card">
+                        <div class="step-number">4</div>
+                        <div class="step-content">
+                            <h3 class="step-title">Paint & Create</h3>
+                            <p class="step-description">I'll set everything up 30 minutes early. You bring the drinks and good vibes!</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
         <!-- Contact Section -->
         <section class="contact-section">
-            <div class="contact-background">
-                <img src="public/paintingClass.jpg" alt="Painting background" class="contact-bg-image">
+            <div class="contact-overlay">
+                <img src="public/paintingClass.jpg" alt="Painting class" class="contact-bg">
             </div>
-            <div class="contact-content">
-                <h2 class="contact-title">Contact Us</h2>
-                <p class="contact-text">Message me on social media to make a booking & get in touch!</p>
-                <div class="social-links">
-                    <a href="https://www.instagram.com/thedeep_artstudios?igsh=Mmt6NnpxMGJ4eTFp" target="_blank" class="social-link">
-                        <span class="social-icon">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                <rect width="24" height="24" rx="6" fill="none"/>
-                                <path d="M12 7.5A4.5 4.5 0 1 0 12 16.5A4.5 4.5 0 1 0 12 7.5Z" stroke="white" stroke-width="2"/>
-                                <circle cx="17" cy="7" r="1" fill="white"/>
+            <div class="contact-card">
+                <h2 class="contact-title">Get In Touch</h2>
+                <p class="contact-description">Ready to book your painting experience? Message me on social media!</p>
+                <div class="social-grid">
+                    <a href="https://www.instagram.com/thedeep_artstudios?igsh=Mmt6NnpxMGJ4eTFp" target="_blank" class="social-card">
+                        <div class="social-icon instagram">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <rect width="20" height="20" x="2" y="2" rx="5" ry="5"/>
+                                <path d="m16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37Z"/>
+                                <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/>
                             </svg>
-                        </span>
-                        <span>thedeep_artstudios</span>
+                        </div>
+                        <span class="social-text">@thedeep_artstudios</span>
                     </a>
-                    <a href="https://facebook.com/share/12Jz1xnjo8D/" target="_blank" class="social-link">
-                        <span class="social-icon">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                <rect width="24" height="24" rx="6" fill="none"/>
-                                <path d="M16 8.5H14.5C14.22 8.5 14 8.72 14 9V10H16V12H14V17H12V12H10V10H12V9C12 7.9 12.9 7 14 7H16V8.5Z" fill="white"/>
+                    
+                    <a href="https://facebook.com/share/12Jz1xnjo8D/" target="_blank" class="social-card">
+                        <div class="social-icon facebook">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
                             </svg>
-                        </span>
-                        <span>Chloe_Tarasenko</span>
+                        </div>
+                        <span class="social-text">Chloe Tarasenko</span>
                     </a>
                 </div>
-            </div>  
+            </div>
         </section>
     </main>
 
     <!-- About Page -->
     <div id="aboutContent" class="about-page hidden">
         <div class="about-container">
-            <h1 class="about-title">About the Studio</h1>
+            <h1 class="about-title">About The Studio</h1>
             
-            <div class="about-text">
-                <p>
-                    The Deep Art Studios was born out of the desire to see people of all ages, skill levels, and walks of life find the simple joy that is painting. To give all people a moment to rest and reflect, and to focus on what matters most. A momentary breath of fresh air from a life of hurry and exacerbating pace.
-                </p>
-                <p>
-                    Everyone can be a painter. In these classes I will show you techniques to elevate your work and create something YOU love. You get to choose the colours, the art style, the composition - based on your preferences and personal taste. You create for your spaces.
-                </p>
-                <p>
-                    We will get to look at some different examples of art styles, and you will create whatever you most resonate with. Whether you came to do some deep self-expression, or just to yap with your bestie - I am here to support you to get out of the class what you came for.
-                </p>
-                <p>
-                    One of the key things we focus on is the importance of colour in the creation of painting pieces, and how it contributes to the overall tone and mood of your final painting. We look at movement, texture, and light - think Impressionism and abstract expressionism.
-                </p>
-                <p>
-                    The costs are kept as low as possible to make this class accessible. The painting journey is about you finding joy and grounding in the present moment. It's a metaphor for trusting the process and accepting your authentic expression as beautiful and sacred as it is. There is no pressure to create a specific result or receive a certain outcome - it's about trying something new and curiously engaging with the experience of painting.
-                </p>
-                <p>
-                    It's about authentic connection, self-expression, and grounding in the present.
-                </p>
-                <p class="signature">
-                    I can't wait to paint with you,<br>
-                    Chloe x
-                </p>
+            <div class="about-grid">
+                <div class="about-text">
+                    <div class="text-block">
+                        <p>The Deep Art Studios was born out of the desire to see people of all ages, skill levels, and walks of life find the simple joy that is painting. To give all people a moment to rest and reflect, and to focus on what matters most.</p>
+                    </div>
+                    
+                    <div class="text-block">
+                        <p>Everyone can be a painter. In these classes I will show you techniques to elevate your work and create something YOU love. You get to choose the colours, the art style, the composition - based on your preferences and personal taste.</p>
+                    </div>
+                    
+                    <div class="text-block">
+                        <p>We focus on the importance of colour in creating painting pieces, and how it contributes to the overall tone and mood of your final work. We explore movement, texture, and light - think Impressionism and abstract expressionism.</p>
+                    </div>
+                    
+                    <div class="text-block">
+                        <p>The costs are kept as low as possible to make this experience accessible. The painting journey is about finding joy and grounding in the present moment. It's about authentic connection, self-expression, and trusting the creative process.</p>
+                    </div>
+                    
+                    <div class="signature">
+                        <p>I can't wait to paint with you,</p>
+                        <p class="signature-name">— Chloe</p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 
     <!-- Class Modal -->
     <div id="classModal" class="modal hidden">
+        <div class="modal-backdrop" onclick="closeModal()"></div>
         <div class="modal-content">
-            <span class="close" onclick="closeModal()">&times;</span>
+            <button class="modal-close" onclick="closeModal()">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
             <h2 id="modalTitle" class="modal-title"></h2>
             <p id="modalDescription" class="modal-description"></p>
-            <button class="modal-btn" onclick="bookNow()">Book Now</button>
+            <button class="cta-button" onclick="bookNow()">Book This Class</button>
         </div>
     </div>
 
     <script src="script.js"></script>
 </body>
 </html>
-
-
-     

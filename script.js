@@ -5,7 +5,7 @@ const classInfo = {
         description: `This classic form of painting is revamped and expanded to include modern and trending styles, and a variety of fun subjects. Ranging in techniques from abstract to textured to realist - this class is suitable for everyone, from beginners to experts. You can choose to paint anything you see in front of you as we explore all the different ways we can translate reality onto a canvas. It's the most diverse and unique class there is, with lots of room for creativity and self-expression.`
     },
     immersion: {
-        title: "Immersion",
+        title: "Immersion", 
         description: `This ocean and beach painting class is our most laid back and easy going class there is! We will have you looking at the sea at every different angle, and appreciating the gentle beauty it bestows on us. This class has emphasis on capturing the vibrancy and beauty of a simple scene, with a practice of capturing movement and light through different brush strokes. This class is most suitable for beginners as well as our surfers and ocean lovers.`
     },
     nurturer: {
@@ -14,20 +14,17 @@ const classInfo = {
     }
 };
 
-// --- Carousel and Video Logic ---
+// Gallery/Carousel Logic
 document.addEventListener('DOMContentLoaded', function() {
-    // --- Carousel ---
     let currentSlideIndex = 0;
-    const slides = document.querySelectorAll('.carousel-image'); // Fixed: changed from .carousel-slide to .carousel-image
-    const dots = document.querySelectorAll('.carousel-dot');
+    const slides = document.querySelectorAll('.gallery-image');
+    const dots = document.querySelectorAll('.gallery-dot');
     const totalSlides = slides.length;
 
     function updateSlidePositions() {
-        // Remove active class from all slides
         slides.forEach(slide => slide.classList.remove('active'));
         dots.forEach(dot => dot.classList.remove('active'));
         
-        // Add active class to current slide and dot
         if (slides[currentSlideIndex]) {
             slides[currentSlideIndex].classList.add('active');
         }
@@ -41,11 +38,6 @@ document.addEventListener('DOMContentLoaded', function() {
         updateSlidePositions();
     }
 
-    function prevSlide() {
-        currentSlideIndex = (currentSlideIndex - 1 + totalSlides) % totalSlides;
-        updateSlidePositions();
-    }
-
     // Make goToSlide globally accessible
     window.goToSlide = function(index) {
         if (index >= 0 && index < totalSlides) {
@@ -54,27 +46,27 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     };
 
-    // Initialize carousel
+    // Initialize gallery
     if (totalSlides > 0) {
         updateSlidePositions();
         
-        // Start auto-rotation
-        let autoSlideInterval = setInterval(nextSlide, 3500);
+        // Auto-rotation
+        let autoSlideInterval = setInterval(nextSlide, 4000);
 
         // Pause on hover
-        const carouselContainer = document.querySelector('.carousel-container');
-        if (carouselContainer) {
-            carouselContainer.addEventListener('mouseenter', () => {
+        const galleryContainer = document.querySelector('.gallery-container');
+        if (galleryContainer) {
+            galleryContainer.addEventListener('mouseenter', () => {
                 clearInterval(autoSlideInterval);
             });
             
-            carouselContainer.addEventListener('mouseleave', () => {
-                autoSlideInterval = setInterval(nextSlide, 3500);
+            galleryContainer.addEventListener('mouseleave', () => {
+                autoSlideInterval = setInterval(nextSlide, 4000);
             });
         }
     }
 
-    // --- Video Logic ---
+    // Video Logic
     const video = document.querySelector('.class-video');
     const placeholder = document.querySelector('.video-placeholder');
     if (video) {
@@ -88,7 +80,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    // --- Navigation ---
+    // Navigation
     const aboutBtn = document.getElementById('aboutBtn');
     const homeBtn = document.getElementById('homeBtn');
     const mainContent = document.getElementById('mainContent');
@@ -112,51 +104,37 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // --- Modal ---
+    // Modal event listeners
     const modal = document.getElementById('classModal');
     if (modal) {
-        modal.addEventListener('click', function(e) {
-            if (e.target === this) {
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
                 closeModal();
             }
         });
     }
 
-    document.addEventListener('keydown', function(e) {
-        if (e.key === 'Escape') {
-            closeModal();
-        }
-    });
-
-    // --- Booking Steps Animation ---
+    // Intersection observer for animations
     const observerOptions = {
-        threshold: 0.1,
+        threshold: 0.2,
         rootMargin: '0px 0px -50px 0px'
     };
     
     const observer = new IntersectionObserver(function(entries) {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                entry.target.style.animationPlayState = 'running';
+                entry.target.classList.add('animate-in');
             }
         });
     }, observerOptions);
 
-    document.querySelectorAll('.booking-step, .booking-step-final').forEach(step => {
-        observer.observe(step);
+    // Observe elements for animation
+    document.querySelectorAll('.step-card, .class-card, .commission-content').forEach(element => {
+        observer.observe(element);
     });
 });
 
-// --- Parallax Effect ---
-window.addEventListener('scroll', function() {
-    const scrolled = window.pageYOffset;
-    const heroImage = document.querySelector('.hero-image');
-    if (heroImage) {
-        heroImage.style.transform = `translateY(${scrolled * 0.5}px)`;
-    }
-});
-
-// --- Modal Functions ---
+// Modal Functions
 function openModal(className) {
     const modal = document.getElementById('classModal');
     const modalTitle = document.getElementById('modalTitle');
@@ -180,13 +158,10 @@ function closeModal() {
 
 function bookNow() {
     closeModal();
-    const bookingSection = document.getElementById('booking');
-    if (bookingSection) {
-        bookingSection.scrollIntoView({ behavior: 'smooth' });
-    }
+    scrollToSection('booking');
 }
 
-// --- Utility ---
+// Utility Functions
 function scrollToSection(sectionId) {
     const element = document.getElementById(sectionId);
     if (element) {
@@ -196,3 +171,12 @@ function scrollToSection(sectionId) {
         });
     }
 }
+
+// Parallax effect for hero
+window.addEventListener('scroll', function() {
+    const scrolled = window.pageYOffset;
+    const heroGallery = document.querySelector('.hero-gallery');
+    if (heroGallery) {
+        heroGallery.style.transform = `translateY(${scrolled * 0.1}px)`;
+    }
+});
