@@ -1,16 +1,12 @@
 // Class information data
 const classInfo = {
-    essence: {
-        title: "Essence",
-        description: `This classic form of painting is revamped and expanded to include modern and trending styles, and a variety of fun subjects. Ranging in techniques from abstract to textured to realist - this class is suitable for everyone, from beginners to experts. You can choose to paint anything you see in front of you as we explore all the different ways we can translate reality onto a canvas. It's the most diverse and unique class there is, with lots of room for creativity and self-expression.`
+    coffeepaint: {
+        title: "Coffee & Canvas",
+        description: `A fun, down-to-earth painting class that you can book for your family and friends. You choose the location, and we’ll come to you! It runs for 2 hours on Saturday mornings from 10am to 12pm. We bring the paint and coffee, you just bring yourself!`
     },
-    immersion: {
-        title: "Immersion", 
-        description: `This ocean and beach painting class is our most laid back and easy going class there is! We will have you looking at the sea at every different angle, and appreciating the gentle beauty it bestows on us. This class has emphasis on capturing the vibrancy and beauty of a simple scene, with a practice of capturing movement and light through different brush strokes. This class is most suitable for beginners as well as our surfers and ocean lovers.`
-    },
-    nurturer: {
-        title: "The Nurturer",
-        description: `Paint some flowers to freshen your space. A 2 hour class where you look at a variety of styles and techniques to paint a beautiful floral arrangement. Proteas are the key subject for this class, with focus on capturing texture and form. We'll learn to paint in an abstract expressionist style, with broad brush strokes of movement and colour. Perfect for your living room or quiet space.`
+    artaperol: {
+        title: "Art & Aperol",
+        description: `Placeholder description — details coming soon.`
     }
 };
 
@@ -62,57 +58,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
             galleryContainer.addEventListener('mouseleave', () => {
                 autoSlideInterval = setInterval(nextSlide, 4000);
-            });
-        }
-    }
-
-    // Testimonial Carousel Logic
-    let currentTestimonialIndex = 0;
-    const testimonials = document.querySelectorAll('.testimonial-item');
-    const testimonialDots = document.querySelectorAll('.testimonial-dot');
-    const totalTestimonials = testimonials.length;
-
-    function updateTestimonialPositions() {
-        testimonials.forEach(testimonial => testimonial.classList.remove('active'));
-        testimonialDots.forEach(dot => dot.classList.remove('active'));
-
-        if (testimonials[currentTestimonialIndex]) {
-            testimonials[currentTestimonialIndex].classList.add('active');
-        }
-        if (testimonialDots[currentTestimonialIndex]) {
-            testimonialDots[currentTestimonialIndex].classList.add('active');
-        }
-    }
-
-    function nextTestimonial() {
-        currentTestimonialIndex = (currentTestimonialIndex + 1) % totalTestimonials;
-        updateTestimonialPositions();
-    }
-
-    // Make goToTestimonial globally accessible
-    window.goToTestimonial = function(index) {
-        if (index >= 0 && index < totalTestimonials) {
-            currentTestimonialIndex = index;
-            updateTestimonialPositions();
-        }
-    };
-
-    // Initialize testimonial carousel
-    if (totalTestimonials > 0) {
-        updateTestimonialPositions();
-
-        // Auto-rotation
-        let autoTestimonialInterval = setInterval(nextTestimonial, 5000);
-
-        // Pause on hover
-        const testimonialContainer = document.querySelector('.testimonials-container');
-        if (testimonialContainer) {
-            testimonialContainer.addEventListener('mouseenter', () => {
-                clearInterval(autoTestimonialInterval);
-            });
-
-            testimonialContainer.addEventListener('mouseleave', () => {
-                autoTestimonialInterval = setInterval(nextTestimonial, 5000);
             });
         }
     }
@@ -197,7 +142,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }, observerOptions);
 
     // Observe elements for animation
-    document.querySelectorAll('.step-card, .class-card, .commission-content').forEach(element => {
+    document.querySelectorAll('.step-card, .class-card').forEach(element => {
         observer.observe(element);
     });
 });

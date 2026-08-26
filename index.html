@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TheDeep_ArtStudios</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="public/favicon.png">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -32,6 +33,7 @@
                         <p class="hero-description">
                             Discover the joy of painting in our intimate group classes. Whether you're a complete beginner or looking to explore new techniques, our mobile art studio brings creativity directly to you.
                         </p>
+                        <p class="hero-location">→ Location: Alice Springs</p>
                         <button class="cta-button" onclick="scrollToSection('booking')">Start Your Journey</button>
                     </div>
                 </div>
@@ -39,13 +41,12 @@
                 <div class="hero-gallery">
                     <div class="gallery-container">
                         <div class="gallery-images">
-                            <img src="public/ocean.jpg" alt="Ocean Painting" class="gallery-image active">
-                            <img src="public/HandPainting.jpg" alt="Hand Painting" class="gallery-image">
-                            <img src="public/WhiteFlowers.jpg" alt="White Proteas" class="gallery-image">
-                            <img src="public/paintingClass.jpg" alt="Painting class" class="gallery-image">
-                            <img src="public/PaintingBeach.jpg" alt="Coastal art" class="gallery-image">
-                            <img src="public/Tomatoes.jpg" alt="Painting" class="gallery-image">
-                            <img src="public/Paint Setup Small Beach.jpg" alt="Beach painting" class="gallery-image">
+                            <img src="public/Art Class 2.jpg" alt="Art class table setup" class="gallery-image active">
+                            <img src="public/Hand Painting Wall.jpg" alt="Hand painting detail" class="gallery-image">
+                            <img src="public/Painting Nature Rock.jpg" alt="Desert rock painting" class="gallery-image">
+                            <img src="public/RedFlowers.jpg" alt="Red flowers painting" class="gallery-image">
+                            <img src="public/Lemon.jpg" alt="Lemon still life painting" class="gallery-image">
+                            <img src="public/Art On Mat.jpg" alt="Artwork laid out on a mat" class="gallery-image">
                         </div>
                         
                         <div class="gallery-controls">
@@ -55,7 +56,6 @@
                             <span class="gallery-dot" onclick="goToSlide(3)"></span>
                             <span class="gallery-dot" onclick="goToSlide(4)"></span>
                             <span class="gallery-dot" onclick="goToSlide(5)"></span>
-                            <span class="gallery-dot" onclick="goToSlide(6)"></span>
                         </div>
                     </div>
                 </div>
@@ -66,19 +66,18 @@
         <section class="classes-section">
             <div class="container">
                 <header class="section-header">
-                    <h2 class="section-title">Our Classes</h2>
+                    <h2 class="section-title">Paint + Sip</h2>
                     <p class="section-subtitle">Choose your creative adventure</p>
                 </header>
                 
                 <div class="classes-grid">
-                    <div class="class-card" onclick="openModal('essence')">
+                    <div class="class-card" onclick="openModal('coffeepaint')">
                         <div class="class-icon">
-                            <span>🎨</span>
+                            <span>☕🎨</span>
                         </div>
                         <div class="class-info">
-                            <h3 class="class-name">Essence</h3>
-                            <p class="class-desc">Still life painting class</p>
-                            <div class="class-price">$25<span>/person</span></div>
+                            <h3 class="class-name">Coffee & Canvas</h3>
+                            <p class="class-desc">Coffee's on us — just bring yourself and paint.</p>
                         </div>
                         <div class="class-action">
                             <span class="action-text">Learn More</span>
@@ -86,29 +85,13 @@
                         </div>
                     </div>
 
-                    <div class="class-card" onclick="openModal('immersion')">
+                    <div class="class-card" onclick="openModal('artaperol')">
                         <div class="class-icon">
-                            <span>🌊</span>
+                            <span>🍹🎨</span>
                         </div>
                         <div class="class-info">
-                            <h3 class="class-name">Immersion</h3>
-                            <p class="class-desc">Ocean painting class</p>
-                            <div class="class-price">$15<span>/person</span></div>
-                        </div>
-                        <div class="class-action">
-                            <span class="action-text">Learn More</span>
-                            <span class="action-arrow">→</span>
-                        </div>
-                    </div>
-
-                    <div class="class-card" onclick="openModal('nurturer')">
-                        <div class="class-icon">
-                            <span>🌸</span>
-                        </div>
-                        <div class="class-info">
-                            <h3 class="class-name">The Nurturer</h3>
-                            <p class="class-desc">Floral painting class</p>
-                            <div class="class-price">$30<span>/person</span></div>
+                            <h3 class="class-name">Art & Aperol</h3>
+                            <p class="class-desc">Placeholder description — details coming soon.</p>
                         </div>
                         <div class="class-action">
                             <span class="action-text">Learn More</span>
@@ -117,7 +100,8 @@
                     </div>
                 </div>
                 
-                <div class="video-testimonials-section">
+                <h3 class="testimonials-heading">Have A Look At What We Get Up To!</h3>
+                <div class="video-gallery-section">
                     <div class="video-container">
                         <div class="video-placeholder">
                             <div class="video-icon">🎥</div>
@@ -125,54 +109,18 @@
                             <small>Coming Soon</small>
                         </div>
                         <video class="class-video hidden" autoplay muted loop playsinline>
-                            <source src="public/waterVideo.mp4" type="video/mp4">
+                            <source src="public/Flower_Pink_Vid.mp4" type="video/mp4">
                             Your browser does not support the video tag.
                         </video>
                     </div>
 
-                    <div class="testimonials-container">
-                        <div class="testimonial-carousel">
-                            <div class="testimonial-item active">
-                                <p class="testimonial-text">"The Deep Art Studios gave me a space to relax and express myself. Chloe's guidance made painting feel effortless and fun. I left with a beautiful piece and a renewed sense of creativity!"</p>
-                                <p class="testimonial-name">— Benjamin Steel</p>
-                            </div>
-                            <div class="testimonial-item">
-                                <p class="testimonial-text">"I've never painted before, but Chloe made it so easy to learn. The atmosphere was welcoming and the techniques she taught really brought my artwork to life. Highly recommend!"</p>
-                                <p class="testimonial-name">— Maxim Tarasenko</p>
-                            </div>
-                            <div class="testimonial-item">
-                                <p class="testimonial-text">"What an incredible experience! The class was intimate, inspiring, and therapeutic. I loved every moment and can't wait to book another session with my friends."</p>
-                                <p class="testimonial-name">— Emma Chen</p>
-                            </div>
-                        </div>
-                        <div class="testimonial-controls">
-                            <span class="testimonial-dot active" onclick="goToTestimonial(0)"></span>
-                            <span class="testimonial-dot" onclick="goToTestimonial(1)"></span>
-                            <span class="testimonial-dot" onclick="goToTestimonial(2)"></span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Commission Section -->
-        <section class="commission-section">
-            <div class="container">
-                <div class="commission-content">
-                    <div class="commission-text">
-                        <h2 class="section-title">Custom Commissions</h2>
-                        <p class="commission-description">
-                            Looking for something unique and personal? I create custom commission 
-                            pieces tailored to your space, story, and style. Whether it's a gift, 
-                            centerpiece, or a personal treasure, I'll work with you to bring your 
-                            vision to life through color, texture, and expression.
-                        </p>
-                        <button class="cta-button secondary" onclick="scrollToSection('booking')">
-                            Start a Commission
-                        </button>
-                    </div>
-                    <div class="commission-image">
-                        <img src="public/WhiteFlowers.jpg" alt="Commission artwork" class="commission-img">
+                    <div class="studio-photos-grid">
+                        <div class="studio-photo"><img src="public/Hand Painting Desk.jpg" alt="Hand painting at the desk"></div>
+                        <div class="studio-photo"><img src="public/Art On Mat.jpg" alt="Artwork laid out on a mat"></div>
+                        <div class="studio-photo"><img src="public/Lemon.jpg" alt="Lemon still life painting"></div>
+                        <div class="studio-photo"><img src="public/Flower Class.jpg" alt="Flower painting class"></div>
+                        <div class="studio-photo"><img src="public/paintingClass.jpg" alt="Painting class"></div>
+                        <div class="studio-photo"><img src="public/Painting Nature Rock.jpg" alt="Desert rock painting"></div>
                     </div>
                 </div>
             </div>
@@ -215,7 +163,7 @@
                         <div class="step-number">4</div>
                         <div class="step-content">
                             <h3 class="step-title">Paint & Create</h3>
-                            <p class="step-description">I'll set everything up 30 minutes early. You bring the drinks and good vibes!</p>
+                            <p class="step-description">I'll set everything up 30 minutes early. Just bring the vibes!</p>
                         </div>
                     </div>
                 </div>
@@ -225,10 +173,11 @@
         <!-- Contact Section -->
         <section class="contact-section">
             <div class="contact-overlay">
-                <img src="public/paintingClass.jpg" alt="Painting class" class="contact-bg">
+                <img src="public/Art On Mat - Landscape.jpg" alt="Art laid out on a mat" class="contact-bg">
             </div>
             <div class="contact-card">
                 <h2 class="contact-title">Get In Touch</h2>
+                <p class="contact-location">Alice Springs, NT</p>
                 <p class="contact-description">Ready to book your painting experience? Message me on social media!</p>
                 <div class="social-grid">
                     <a href="https://www.instagram.com/thedeep_artstudios?igsh=Mmt6NnpxMGJ4eTFp" target="_blank" class="social-card">
@@ -296,7 +245,7 @@
             <div class="paintings-grid">
                 <div class="painting-item">
                     <div class="painting-image">
-                        <img src="public/ocean.jpg" alt="Ocean painting">
+                        <img src="public/OceanPainting.jpg" alt="Ocean painting">
                     </div>
                     <h3 class="painting-title">Ocean Waves</h3>
                     <p class="painting-description">A serene coastal scene capturing the movement and light of ocean waves.</p>
@@ -332,7 +281,7 @@
 
                 <div class="painting-item">
                     <div class="painting-image">
-                        <img src="public/HandPainting.jpg" alt="Hand painted art">
+                        <img src="public/Hand Painting Wall.jpg" alt="Hand painted art">
                     </div>
                     <h3 class="painting-title">Artist's Touch</h3>
                     <p class="painting-description">Abstract expressionist piece showcasing bold colors and movement.</p>
@@ -341,7 +290,7 @@
 
                 <div class="painting-item">
                     <div class="painting-image">
-                        <img src="public/Paint Setup Small Beach.jpg" alt="Beach painting">
+                        <img src="public/HandPaintingBeach.jpg" alt="Beach painting">
                     </div>
                     <h3 class="painting-title">Beach Memories</h3>
                     <p class="painting-description">Intimate coastal landscape with warm, inviting tones.</p>
