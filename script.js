@@ -7,6 +7,11 @@ const classInfo = {
     artaperol: {
         title: "Art & Aperol",
         description: `Placeholder description — details coming soon.`
+    },
+
+    paintGather: {
+        title: "Paint & Gather",
+        description: `Our mobile painting class - we come to you! Design the class however you like and we'll make it happen!`
     }
 };
 
